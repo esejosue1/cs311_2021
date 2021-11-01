@@ -3,7 +3,7 @@ import random
 import json
 
 filename="last_opponent_moves.json"
-#add confess to data
+#add confess to data:
 def add_data_confess():
     item_data={}
     with open(filename, "r") as f:
@@ -49,13 +49,12 @@ if __name__ == "__main__":
             data_length1=len(temp1)
 
         #once 3 straight silent from opp, confess
-        if(data_length1>3):
-            if(temp1[data_length1-1]["last_opponent_move"] == "silent" and temp1[data_length1-2]["last_opponent_move"] == "silent" and temp1[data_length2-3]["last_opponent_move"] == "silent"):
-                print("confess")
+        if(data_length1>3 and temp1[data_length1-1]["last_opponent_move"] == "silent" and temp1[data_length1-2]["last_opponent_move"] == "silent" and temp1[data_length1-3]["last_opponent_move"] == "silent"):
+            print("confess")
 
         else:
             print("silent")
     #opponent confess, choose random
-    elif(args.last_opponent_move == "confess"):
+    if(args.last_opponent_move == "confess"):
         add_data_confess()
-        print(random.choice(['silent','confess'])
+        print(random.choice(['silent','confess']))
