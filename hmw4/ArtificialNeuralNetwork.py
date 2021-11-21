@@ -61,6 +61,7 @@ class Node:
 new_node=Node()
 #make nodes
 new_node.make_children(0, nodes_per_layer)
+new_node.print_names(0, nodes_per_layer)
 #make weights
 new_node.make_connection_weight(0, nodes_per_layer)
 #print
