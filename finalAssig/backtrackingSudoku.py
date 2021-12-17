@@ -1,3 +1,7 @@
+#josue gallardo cs 311 12/17/2021
+
+
+#add any sudoku from google. 0 represent empty spaces
 sudokuExample=[
         [5,3,0,0,7,0,0,0,0],
         [6,0,0,1,9,5,0,0,0],
